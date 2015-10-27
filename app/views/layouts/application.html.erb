@@ -5,8 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="articles.scss">
 </head>
 <body>
+
+<div class="header">
+  <ul class="list-inline">
+    <li><%= link_to 'Wikinimous', articles_path %></li>
+    <li><%= link_to 'Nouvel article', new_article_path %></li>
+  </ul>
+</div>
 
 <%= yield %>
 

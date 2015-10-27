@@ -1,0 +1,17 @@
+<div class="index_articles">
+
+  <h1>Check out your articles !!</h1>
+  <br>
+
+  <hr>
+  <%= @articles.each do |article| %>
+    <div class="article-item">
+      <h3><%= article.title %></h3>
+      <p><%= article.content %></p>
+      <p><%= link_to 'Voir détails', article_path(article) %></p>
+      <p><%= link_to 'Mettre à jour', edit_article_path(article) %></p>
+    </div>
+    <hr>
+  <% end %>
+
+</div>
